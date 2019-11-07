@@ -11,7 +11,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private List <Dance> danceList= new ArrayList<>();
+    private List<Dance> danceList = new ArrayList<>();
     private RecyclerView recyclerView;
     private DanceAdapter mAdapter;
 
@@ -20,10 +20,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView=findViewById(R.id.recycler_view);
+        recyclerView = findViewById(R.id.recycler_view);
 
-        mAdapter= new DanceAdapter(danceList);
-        RecyclerView.LayoutManager mLayoutManager= new LinearLayoutManager(getApplicationContext());
+        mAdapter = new DanceAdapter(danceList);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setAdapter(mAdapter);
 
@@ -31,7 +31,49 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void danceDetails() {
-        Dance dance= new Dance("איך אפשר לישון");
+        Dance dance = new Dance("איך אפשר לישון");
+        danceList.add(dance);
+
+        dance = new Dance("אני מנגן");
+        danceList.add(dance);
+
+        dance = new Dance("בוא נחזור הביתה בשלום");
+        danceList.add(dance);
+
+        dance = new Dance("הרועה הבודד");
+        danceList.add(dance);
+
+        dance = new Dance("ילדה ומטריה");
+        danceList.add(dance);
+
+        dance = new Dance("יעל");
+        danceList.add(dance);
+
+        dance = new Dance("כמה טוב בבית");
+        danceList.add(dance);
+
+        dance = new Dance("כשיש לך חבר");
+        danceList.add(dance);
+
+        dance = new Dance("לדבר עם חיות");
+        danceList.add(dance);
+
+        dance = new Dance("לונה פארק");
+        danceList.add(dance);
+
+        dance = new Dance("מה נועלים");
+        danceList.add(dance);
+
+        dance = new Dance("מתנות בהזדמנות");
+        danceList.add(dance);
+
+        dance = new Dance("שיר אהבה ממוחשב");
+        danceList.add(dance);
+
+        dance = new Dance("שלום היא מילה שימושית");
+        danceList.add(dance);
+
+        dance = new Dance("תנו לחיות לחיות");
         danceList.add(dance);
 
         mAdapter.notifyDataSetChanged();
