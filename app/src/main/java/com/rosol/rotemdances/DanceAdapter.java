@@ -45,6 +45,9 @@ public class DanceAdapter extends RecyclerView.Adapter<DanceAdapter.MyViewHolder
     }
 
 
+    public interface ListItemClickListener{
+        void onListItemClick(int clickedItemIndex);
+    }
 
 
 }
