@@ -18,13 +18,13 @@ import java.util.List;
 public class DanceAdapter extends RecyclerView.Adapter<DanceAdapter.MyViewHolder> {
 
     private List <Dance> danceList;
-    private onClickListenerItem mOnClickListener;
+    private OnClickListenerItem mOnClickListener;
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView danceName;
-        onClickListenerItem onClickListener;
-        public MyViewHolder(View itemView, onClickListenerItem onClickListener) {
+        OnClickListenerItem onClickListener;
+        public MyViewHolder(View itemView, OnClickListenerItem onClickListener) {
             super(itemView);
             danceName = itemView.findViewById(R.id.dance_title_text_view);
             this.onClickListener=onClickListener;
@@ -37,7 +37,7 @@ public class DanceAdapter extends RecyclerView.Adapter<DanceAdapter.MyViewHolder
         }
     }
 
-    public DanceAdapter (List <Dance> danceList, onClickListenerItem onClickListenerItem){
+    public DanceAdapter (List <Dance> danceList, OnClickListenerItem onClickListenerItem){
         this.danceList=danceList;
         this.mOnClickListener=onClickListenerItem;
 
@@ -61,7 +61,7 @@ public class DanceAdapter extends RecyclerView.Adapter<DanceAdapter.MyViewHolder
         return danceList.size();
     }
 
-    public interface onClickListenerItem{
+    public interface OnClickListenerItem{
         void onItemClick(int position);
     }
 

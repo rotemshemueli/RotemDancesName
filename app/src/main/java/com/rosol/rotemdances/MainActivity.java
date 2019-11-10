@@ -18,7 +18,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements DanceAdapter.onClickListenerItem {
+public class MainActivity extends AppCompatActivity implements DanceAdapter.OnClickListenerItem {
 
     private List<Dance> danceList = new ArrayList<>();
     private RecyclerView recyclerView;
